@@ -11,11 +11,19 @@
 }
 
 body {
-    max-width: 460px;
 }
 
-#create-field{
+#create-field {
+    /*Relative Children*/
+    align-items: unset;
+    justify-content: unset;
+    /*Centered Self*/
     align-self: center;
+    /*Background*/
     background: url("images/game/field.png");
     background-color: #123456;
+}
+
+[title] {
+    font-size: 6vh;
 }
