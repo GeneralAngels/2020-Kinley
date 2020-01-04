@@ -35,19 +35,33 @@ function show_macro() {
         point.style.height = (RobotHeight / ScreenYtoFieldY) + "px";
         point.style.backgroundColor = "#876543";
         // Ondrag
-        point.ondrag = function (event) {
+        point.ontouchmove = function (event) {
             event.preventDefault();
-            point.style.left = (event.x) + "px";
-            point.style.top = (event.y) + "px";
+            let c = parse_event(event);
+            point.style.left = (c.x) + "px";
+            point.style.top = (c.y) + "px";
+            macro[index].screenX = c.x;
+            macro[index].screenY = c.y;
         };
-        point.ondragover = function (event) {
+        point.ontouchend = function (event) {
             event.preventDefault();
-            macro[index].screenX = event.x;
-            macro[index].screenY = event.y;
             show_macro();
         };
         fieldElement.appendChild(point);
     }
+}
+
+function parse_event(event) {
+    let x, y;
+    if (event.touches !== undefined &&
+        event.touches.length > 0) {
+        x = event.touches[0].clientX;
+        y = event.touches[0].clientY;
+    } else {
+        x = event.clientX;
+        y = event.clientY;
+    }
+    return {x: x, y: y};
 }
 
 // Things

@@ -13,6 +13,11 @@
 body {
 }
 
+#home{
+    max-width: 460px;
+    align-self: center;
+}
+
 #create-field {
     /*Relative Children*/
     align-items: unset;
