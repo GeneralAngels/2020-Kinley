@@ -14,3 +14,6 @@ body {
     max-width: 460px;
 }
 
+#create-field{
+    background: url("images/game/field.png");
+}
