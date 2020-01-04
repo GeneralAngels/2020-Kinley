@@ -15,5 +15,7 @@ body {
 }
 
 #create-field{
+    align-self: center;
     background: url("images/game/field.png");
+    background-color: #123456;
 }
