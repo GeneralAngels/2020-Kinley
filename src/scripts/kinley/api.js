@@ -13,9 +13,7 @@ class Kinley {
         UI.popup("Adding new point.", 1000);
         macro.push({
             x: (FieldWidth / ScreenXtoFieldX) / 2,
-            y: (FieldHeight / ScreenYtoFieldY) / 2,
-            theta: 0,
-            action: ""
+            y: (FieldHeight / ScreenYtoFieldY) / 2
         });
         Kinley.redraw();
     }
@@ -80,7 +78,7 @@ class Kinley {
 
         let ratio = FieldHeight / FieldWidth;
         let width = screen.width;
-        let height = screen.height;
+        let height = screen.height - UI.get("bar").offsetHeight;
         let screenX, screenY;
         if (width * ratio < height) {
             screenX = width;
@@ -113,21 +111,17 @@ class Kinley {
     }
 
     static compileList() {
-        let compiledMacro = [];
+        let list = "";
         for (let precompiledItem of macro) {
-            let item = {
-                fieldX: precompiledItem.screenX * ScreenXtoFieldX,
-                fieldY: precompiledItem.screenY * ScreenYtoFieldY,
-                theta: precompiledItem.theta,
-                action: precompiledItem.action
-            };
-            compiledMacro.push(item);
+            if (list.length > 0)
+                list += "->";
+            list += "(";
+            list += (Math.floor(precompiledItem.x * ScreenXtoFieldX) / 100).toString();
+            list += ",";
+            list += (Math.floor(precompiledItem.y * ScreenYtoFieldY) / 100).toString();
+            list += ")";
         }
-        return compiledMacro;
-    }
-
-    static compileShleam() {
-
+        return list;
     }
 }
 
