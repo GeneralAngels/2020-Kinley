@@ -28,11 +28,11 @@ body {
 }
 
 #bar > button {
-    font-size: 40px;
+    font-size: 35px;
     color: #FFFFFF;
     background-color: #11119980;
     border-radius: 5vh;
     margin: 1vh;
-    height: 55px;
-    width: 55px;
+    height: 60px;
+    width: 60px;
 }
