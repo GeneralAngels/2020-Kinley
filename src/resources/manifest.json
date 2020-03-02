@@ -1,10 +1,10 @@
 {
   "name": "Kinley 2",
   "short_name": "Kinley 2",
-  "description": "Kinley Kiosk v2",
+  "description": "Plan robot trajectories",
   "start_url": "../index.html",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "background_color": "#707070",
+  "theme_color": "#707070",
   "display": "standalone",
   "orientation": "natural",
   "icons": [

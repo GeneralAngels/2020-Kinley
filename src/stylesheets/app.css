@@ -6,29 +6,16 @@
 :root {
     --bright: #DDDDEE;
     --dark: #9999AA;
-    --theme: #ffffff;
+    --theme: #707070;
     --text: black;
 }
 
 body {
+    /* max-width: 460px; */
 }
 
-#home{
-    max-width: 460px;
-    align-self: center;
-}
-
-#create-field {
-    /*Relative Children*/
-    align-items: unset;
-    justify-content: unset;
-    /*Centered Self*/
-    align-self: center;
-    /*Background*/
-    background: url("images/game/field.png");
-    background-color: #123456;
-}
-
-[title] {
-    font-size: 6vh;
+#field {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/game/field.png");
 }
