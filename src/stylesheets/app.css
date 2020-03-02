@@ -20,3 +20,19 @@ body {
     background-size: cover;
     background-image: url("../images/game/field.png");
 }
+
+#bar {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+#bar > button {
+    font-size: 7vh;
+    color: #FFFFFF;
+    background-color: #11119980;
+    border-radius: 5vh;
+    margin: 1vh;
+    height: 55px;
+    width: 55px;
+}

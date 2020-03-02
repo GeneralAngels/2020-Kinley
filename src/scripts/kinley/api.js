@@ -10,7 +10,6 @@ let macro = [];
 class Kinley {
 
     static add() {
-        UI.popup("Adding new point.", 1000);
         macro.push({
             x: (FieldWidth / ScreenXtoFieldX) / 2,
             y: (FieldHeight / ScreenYtoFieldY) / 2
@@ -78,7 +77,7 @@ class Kinley {
 
         let ratio = FieldHeight / FieldWidth;
         let width = screen.width;
-        let height = screen.height - UI.get("bar").offsetHeight;
+        let height = screen.height;
         let screenX, screenY;
         if (width * ratio < height) {
             screenX = width;
