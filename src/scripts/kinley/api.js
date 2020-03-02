@@ -113,7 +113,7 @@ class Kinley {
         let list = "";
         for (let precompiledItem of macro) {
             if (list.length > 0)
-                list += "->";
+                list += " > ";
             list += "(";
             list += (Math.floor(precompiledItem.x * ScreenXtoFieldX) / 100).toString();
             list += ",";
